@@ -1,0 +1,72 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="80" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="torch" />
+          <option value="pandas" />
+          <option value="scikit-learn" />
+          <option value="seaborn" />
+          <option value="matplotlib" />
+          <option value="sktime-all-extras" />
+          <option value="pyts" />
+          <option value="tslearn" />
+          <option value="pyod" />
+          <option value="neuralforecast" />
+          <option value="spacy" />
+          <option value="numpy" />
+          <option value="tqdm" />
+          <option value="sktime" />
+          <option value="statsmodels" />
+          <option value="aeon" />
+          <option value="notebook" />
+          <option value="tsfresh" />
+          <option value="keras-self-attention" />
+          <option value="alibi" />
+          <option value="scipy" />
+          <option value="cycler" />
+          <option value="utilsforecast" />
+          <option value="filterpy" />
+          <option value="gpytorch" />
+          <option value="pytorch-cuda" />
+          <option value="pytorch" />
+          <option value="torchaudio" />
+          <option value="adtk" />
+          <option value="astropy" />
+          <option value="torchvision" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N801" />
+          <option value="N802" />
+          <option value="N812" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="object.*" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnusedImportsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

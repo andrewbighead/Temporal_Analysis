@@ -7,21 +7,6 @@
 
 ---
 
-## Repository Contents
-
-| File | Description |
-|---|---|
-| `LSTM_BiLSTM-M.py` | Main training script — full end-to-end pipeline |
-| `baselines_tff.py` | All baseline models + Diebold-Mariano tests (Table 5, Table 6) |
-| `ablation_study.py` | Ablation study — variants A1–A9 (Table 7) |
-| `xai_enhanced.py` | XAI attribution analyses — Figures 14, 15, 16 |
-| `fix_cluster_assignment.py` | Unified cluster assignment for all 594,978 points |
-| `recompute_cluster_stratification_v2.py` | Per-cluster metrics (Table 10) and Figure 14 |
-| `fix_persistence_fixed_sample.py` | Persistence baseline on the fixed 200k test sample |
-| `spatial_holdout_test.py` | Spatial generalization experiment (Section 5.9, Table 11) |
-
----
-
 ## Requirements
 
 ```

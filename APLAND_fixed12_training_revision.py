@@ -3,9 +3,9 @@
 APLAND fixed-12-day CNN-BiLSTM-Attention training pipeline.
 
 Paper: "Machine Learning and Explainable Deep Learning for Forecasting
-        Landslide Deformation using EGMS Time Series"
+        Ground Deformation in a Landslide-Prone EGMS Corridor"
 Authors: Madadi, Capone, Srinivasareddy, Di Martire, Murano
-Journal: Applied Soft Computing (2025)
+Journal: Applied Soft Computing (manuscript under revision)
 
 Purpose
 -------
@@ -41,9 +41,11 @@ revision_table_evaluation_audit.json (optional; --revision-table-evaluation)
 
 Example
 -------
-python APLAND_fixed12_training.py \
-  --csv "EGMS_L2b_044_0234_IW3_VV_2019_2023_1.csv" \
-  --output-dir "fixed12_outputs"
+python APLAND_fixed12_training_revision.py \
+  --csv "data/EGMS_L2b.csv" \
+  --evaluate-existing-model "outputs/fixed12_training/best_fixed12.keras" \
+  --revision-table-evaluation \
+  --output-dir "outputs/fixed12_revision_tables"
 
 Use --cadence-only to produce the temporal audit without training.
 Use --evaluate-existing-model PATH --revision-table-evaluation to evaluate

@@ -191,7 +191,19 @@ python APLAND_fixed12_hyperparameter_search.py \
 
 The seven prespecified configurations H1--H7 compare lookback length, Huber-loss delta, and recent-sampling bias power. Selection uses the common validation sample; test labels are not used for hyperparameter selection. Add `--force` only when completed configurations must intentionally be rerun.
 
-### Step 10 — Join EGMS points to the landslide inventory
+### Step 10 — Evaluate Tables 9, 10, and 13 with the saved checkpoint
+
+```bash
+python APLAND_fixed12_training_revision.py \
+  --csv data/EGMS_L2b.csv \
+  --evaluate-existing-model outputs/fixed12_training/best_fixed12.keras \
+  --revision-table-evaluation \
+  --output-dir outputs/fixed12_revision_tables
+```
+
+This step evaluates the saved seed-42 checkpoint without retraining it. It writes `table9_sampling_robustness.csv` (sampling robustness: recency-biased, uniform, and full-coverage regimes), `table10_active_subset.csv` (top 10% active subset of the fixed headline test sample), `table13_intra_corridor.csv` (interior vs. eastern block), and `revision_table_evaluation_audit.json`. Metrics are computed globally over the paired windows of each sample, and the target variance of each sample is reported.
+
+### Step 11 — Join EGMS points to the landslide inventory
 
 ```bash
 python APLAND_landslide_inventory_join.py \
@@ -216,6 +228,7 @@ The `--predictions` argument is optional and adds within-/outside-inventory perf
 | `APLAND_fixed12_baselines_multiseed.py` | Baselines, multi-seed results, and epoch-aggregated DM tests | EGMS CSV |
 | `APLAND_fixed12_ablation_multiseed.py` | A1--A9 multi-seed ablation study | EGMS CSV |
 | `APLAND_fixed12_hyperparameter_search.py` | Seven-configuration validation search | Training script and EGMS CSV |
+| `APLAND_fixed12_training_revision.py` | Evaluation of Tables 9, 10, and 13 on the saved checkpoint | Trained model and EGMS CSV |
 | `APLAND_landslide_inventory_join.py` | EGMS--landslide inventory spatial overlay | EGMS CSV and complete inventory shapefile |
 
 ## 5. Reproducibility notes
